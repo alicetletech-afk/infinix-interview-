@@ -17,7 +17,18 @@ summary strong{display:block;font-size:16px;line-height:1.35}.plus{font-size:23p
 details[open] .plus{transform:rotate(45deg)}.answer{border-top:1px solid var(--line);padding:15px 17px 18px;line-height:1.55;font-size:14px;background:#fefeff}
 .answer p{margin:0 0 10px}.answer p:last-of-type{margin-bottom:0}.keys{margin-top:14px;padding:10px 12px;border-radius:12px;background:var(--soft);font-size:12px;line-height:1.45}
 .cn{margin-top:8px;color:var(--muted);font-size:12px}.hint{font-size:12px;color:var(--muted);text-align:center;margin-top:20px}
-</style></head><body><main>
+
+.nav-switch{display:flex;gap:8px;margin:0 0 18px;position:sticky;top:8px;z-index:20;
+background:rgba(248,245,255,.88);backdrop-filter:blur(12px);padding:8px;border:1px solid var(--line);
+border-radius:16px;box-shadow:0 6px 20px rgba(55,30,80,.06)}
+.nav-switch a{flex:1;text-align:center;text-decoration:none;padding:10px 9px;border-radius:11px;
+font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap}
+.nav-switch a.active{background:var(--ink);color:#fff}
+.nav-switch a:not(.active){background:#fff;color:var(--violet,#7357ff)}
+</style></head><body><main><nav class="nav-switch">
+<a class="active" href="index.html">Interview Q&A</a>
+<a href="chinese.html">中文急救包</a>
+</nav>
 <div class="eyebrow">ALICE · 陈翼飞</div>
 <h1>INFINIX Interview</h1>
 <p class="intro">กวาดสายตาหาคำถาม → แตะครั้งเดียว → คำตอบกางอยู่ใต้ข้อนั้นทันที</p>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>中文面试急救包</title>
+<style>
+:root{--bg:#f8f5ff;--ink:#21182f;--muted:#786e83;--purple:#7c3aed;--line:#e6ddf1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans Thai","PingFang SC","Helvetica Neue",Arial,sans-serif}
+main{max-width:900px;margin:auto;padding:32px 16px 56px}.ey{font-size:12px;font-weight:800;letter-spacing:.13em;color:var(--purple)}
+h1{font-size:clamp(34px,8vw,54px);margin:10px 0 4px}.sub{margin:0 0 22px;color:var(--muted)}
+.search{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:white;font-size:16px}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:12px 0 5px}.chip{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 12px;white-space:nowrap;font-size:13px}.chip.on{background:var(--ink);color:white}
+.count{font-size:13px;color:var(--muted);margin:10px 2px 14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:white;border:1px solid var(--line);border-radius:20px;padding:18px;min-height:170px;box-shadow:0 7px 24px rgba(55,30,80,.05)}
+.tag{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--purple)}
+.zh{font-size:29px;font-weight:750;margin-top:12px;line-height:1.15}.py{font-size:15px;font-weight:600;color:var(--purple);margin-top:5px;line-height:1.4}
+.mean{border-top:1px solid #eee7f5;margin-top:14px;padding-top:12px}.th{font-size:14px;font-weight:650}.en{font-size:12px;color:var(--muted);margin-top:4px}
+.rescue{margin-top:22px;background:var(--ink);color:white;padding:18px;border-radius:20px}.rescue b{color:#d9c5ff}.rescue p{font-size:13px;line-height:1.65;margin:8px 0;color:#eee7f5}
+@media(max-width:620px){main{padding:28px 14px 44px}.grid{grid-template-columns:1fr}.card{min-height:155px}.zh{font-size:27px}.py{font-size:15px}}
+
+.nav-switch{display:flex;gap:8px;margin:0 0 18px;position:sticky;top:8px;z-index:20;
+background:rgba(248,245,255,.88);backdrop-filter:blur(12px);padding:8px;border:1px solid var(--line);
+border-radius:16px;box-shadow:0 6px 20px rgba(55,30,80,.06)}
+.nav-switch a{flex:1;text-align:center;text-decoration:none;padding:10px 9px;border-radius:11px;
+font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap}
+.nav-switch a.active{background:var(--ink);color:#fff}
+.nav-switch a:not(.active){background:#fff;color:var(--purple,#7357ff)}
+</style></head>
+<body><main><nav class="nav-switch">
+<a href="index.html">Interview Q&A</a>
+<a class="active" href="chinese.html">中文急救包</a>
+</nav>
+<div class="ey">ALICE'S INTERVIEW CHEAT SHEET</div><h1>中文面试急救包</h1>
+<p class="sub">Chinese × Marketing · 中文 + Pinyin + ไทย + English</p>
+<input class="search" id="q" type="search" placeholder="ค้นหา 中文 / pinyin / ไทย / English">
+<div class="filters" id="filters"></div><div class="count" id="count"></div><section class="grid" id="grid"></section>
+<div class="rescue"><b>救命句 · ประโยคเอาตัวรอด</b>
+<p><strong>Bù hǎoyìsi, zhège cí kěyǐ jiěshì yíxià ma?</strong><br>不好意思，这个词可以解释一下吗？ — ช่วยอธิบายคำนี้หน่อยได้ไหมคะ?</p>
+<p><strong>Kěyǐ shuō màn yìdiǎn ma?</strong><br>可以说慢一点吗？ — ช่วยพูดช้าลงนิดหนึ่งได้ไหมคะ?</p></div>
+</main>
+<script>
+var cards=[["目标市场", "mùbiāo shìchǎng", "ตลาดเป้าหมาย", "Target market", "Marketing"], ["市场定位", "shìchǎng dìngwèi", "การวางตำแหน่งตลาด", "Market positioning", "Marketing"], ["目标受众", "mùbiāo shòuzhòng", "กลุ่มเป้าหมาย", "Target audience", "Marketing"], ["市场策略", "shìchǎng cèlüè", "กลยุทธ์การตลาด", "Marketing strategy", "Marketing"], ["营销活动", "yíngxiāo huódòng", "แคมเปญ / กิจกรรมการตลาด", "Marketing campaign", "Marketing"], ["品牌知名度", "pǐnpái zhīmíngdù", "การรับรู้แบรนด์", "Brand awareness", "Brand"], ["品牌定位", "pǐnpái dìngwèi", "ตำแหน่งแบรนด์", "Brand positioning", "Brand"], ["用户洞察", "yònghù dòngchá", "อินไซต์ผู้ใช้ / ลูกค้า", "User insight", "Marketing"], ["消费者需求", "xiāofèizhě xūqiú", "ความต้องการของผู้บริโภค", "Consumer needs", "Marketing"], ["竞争对手", "jìngzhēng duìshǒu", "คู่แข่ง", "Competitor", "Marketing"], ["市场份额", "shìchǎng fèn'é", "ส่วนแบ่งตลาด", "Market share", "Marketing"], ["渠道", "qúdào", "ช่องทาง", "Channel", "Channel"], ["线上渠道", "xiànshàng qúdào", "ช่องทางออนไลน์", "Online channel", "Channel"], ["线下渠道", "xiànxià qúdào", "ช่องทางออฟไลน์", "Offline channel", "Channel"], ["投放", "tóufàng", "ลงสื่อ / ยิงแอด / ปล่อยงบ", "Media / ad placement", "Performance"], ["转化率", "zhuǎnhuàlǜ", "อัตรา Conversion", "Conversion rate", "Performance"], ["投资回报率", "tóuzī huíbàolǜ", "ผลตอบแทนจากการลงทุน", "ROI", "Performance"], ["预算分配", "yùsuàn fēnpèi", "การจัดสรรงบประมาณ", "Budget allocation", "Performance"], ["获客成本", "huòkè chéngběn", "ต้นทุนการหาลูกค้า", "CAC", "Performance"], ["潜在客户", "qiánzài kèhù", "ลูกค้าที่มีแนวโน้ม / ลีด", "Potential customer / Lead", "Performance"], ["客户留存", "kèhù liúcún", "การรักษาลูกค้า", "Customer retention", "Performance"], ["项目管理", "xiàngmù guǎnlǐ", "การบริหารโครงการ", "Project management", "Project"], ["项目进度", "xiàngmù jìndù", "ความคืบหน้า / Timeline", "Project progress", "Project"], ["优先级", "yōuxiānjí", "ลำดับความสำคัญ", "Priority", "Project"], ["资源分配", "zīyuán fēnpèi", "การจัดสรรทรัพยากร", "Resource allocation", "Project"], ["跨部门合作", "kuà bùmén hézuò", "การทำงานข้ามแผนก", "Cross-functional collaboration", "Project"], ["协调", "xiétiáo", "ประสานงาน", "Coordinate", "Project"], ["执行", "zhíxíng", "ลงมือดำเนินการ", "Execution", "Project"], ["落地", "luòdì", "ทำให้แผนเกิดขึ้นจริง", "Implement / execute", "Project"], ["复盘", "fùpán", "ทบทวนผลหลังจบงาน", "Retrospective / review", "Project"], ["数据分析", "shùjù fēnxī", "การวิเคราะห์ข้อมูล", "Data analysis", "Performance"], ["关键指标", "guānjiàn zhǐbiāo", "ตัวชี้วัดสำคัญ", "Key metrics", "Performance"], ["业绩", "yèjì", "ผลงานทางธุรกิจ", "Business performance", "Performance"], ["成果", "chéngguǒ", "ผลลัพธ์", "Results", "Project"], ["挑战", "tiǎozhàn", "ความท้าทาย", "Challenge", "Interview"], ["解决方案", "jiějué fāng'àn", "แนวทางแก้ปัญหา", "Solution", "Interview"], ["应对", "yìngduì", "รับมือสถานการณ์", "Respond / handle", "Interview"], ["独立负责", "dúlì fùzé", "รับผิดชอบงานด้วยตัวเอง", "Own independently", "Interview"], ["工作范围", "gōngzuò fànwéi", "ขอบเขตงาน", "Scope of work", "Interview"], ["汇报对象", "huìbào duìxiàng", "คนที่รายงานตรง", "Reporting line", "Interview"], ["总部", "zǒngbù", "สำนักงานใหญ่", "HQ", "Company"], ["本地化", "běndìhuà", "การปรับให้เข้ากับตลาดท้องถิ่น", "Localization", "Company"], ["泰国市场", "Tàiguó shìchǎng", "ตลาดประเทศไทย", "Thailand market", "Company"], ["产品上市", "chǎnpǐn shàngshì", "การเปิดตัวสินค้า", "Product launch", "Product"], ["上市计划", "shàngshì jìhuà", "แผนเปิดตัว / เข้าสู่ตลาด", "Launch / GTM plan", "Product"], ["卖点", "màidiǎn", "จุดขาย", "Selling point", "Product"], ["用户反馈", "yònghù fǎnkuì", "ความคิดเห็นจากผู้ใช้", "User feedback", "Product"], ["影响力", "yǐngxiǎnglì", "ผลกระทบ / อิทธิพล", "Impact / influence", "Interview"], ["期望薪资", "qīwàng xīnzī", "เงินเดือนที่คาดหวัง", "Expected salary", "Interview"], ["到岗时间", "dàogǎng shíjiān", "วันที่พร้อมเริ่มงาน", "Availability / start date", "Interview"]];
+var active="ทั้งหมด";
+var cats=["ทั้งหมด","Marketing","Brand","Channel","Performance","Project","Product","Company","Interview"];
+var grid=document.getElementById("grid"), filters=document.getElementById("filters"), q=document.getElementById("q"), count=document.getElementById("count");
+function renderFilters(){filters.innerHTML="";cats.forEach(function(c){var b=document.createElement("button");b.className="chip"+(c===active?" on":"");b.textContent=c;b.onclick=function(){active=c;renderFilters();renderCards()};filters.appendChild(b)})}
+function renderCards(){var term=q.value.toLowerCase().trim();var shown=cards.filter(function(c){var okcat=active==="ทั้งหมด"||c[4]===active;var okterm=!term||c.slice(0,4).join(" ").toLowerCase().indexOf(term)>-1;return okcat&&okterm});count.textContent=shown.length+" คำ";grid.innerHTML="";shown.forEach(function(c){var el=document.createElement("article");el.className="card";el.innerHTML='<div class="tag">'+c[4]+'</div><div class="zh">'+c[0]+'</div><div class="py">'+c[1]+'</div><div class="mean"><div class="th">'+c[2]+'</div><div class="en">'+c[3]+'</div></div>';grid.appendChild(el)})}
+q.addEventListener("input",renderCards);renderFilters();renderCards();
+</script></body></html>
